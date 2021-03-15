@@ -97,7 +97,6 @@ def check_mega_menu_links(source):
 
                 if first_part.lower() not in href:
                     incorrect_links.append([text, href])
-                    print(text, href)
 
 def main():
     # Give the location of the file
