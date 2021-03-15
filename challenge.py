@@ -40,9 +40,6 @@ def check_mega_menu_imgs(source):
         if img_src and not check_broken_link(img_src):
             broken_imgs.append(img_src)
 
-    #print("Total Images: ", len(imgs_within_main_menu))
-    #print("Broken Images: ", len(broken_imgs))
-
 def check_mega_menu_links(source):
     links_within_main_menu = source.xpath("//ul[contains(@class, 'tb-megamenu-nav')]//a")
 
@@ -101,13 +98,6 @@ def check_mega_menu_links(source):
                 if first_part.lower() not in href:
                     incorrect_links.append([text, href])
                     print(text, href)
-
-
-
-    #print("Total links: ", total_links)
-    print("Incorrect links: ", len(incorrect_links))
-    #print("Broken links: ", len(broken_links))
-
 
 def main():
     # Give the location of the file
